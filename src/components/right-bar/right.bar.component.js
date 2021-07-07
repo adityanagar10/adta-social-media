@@ -1,11 +1,31 @@
-import React from 'react';
-import './right.bar.styles.css'
+import "./right.bar.styles.css";
+import { Users } from "../../dummyData";
+import Online from "../online/online.component";
 
-export default function RightBar(){
+export default function Rightbar({ profile }) {
+  const HomeRightbar = () => {
     return (
-      <div className="rightbar">
-        <div className="rightbarWrapper">
-        <>
+      <>
+        <div className="birthdayContainer">
+          <img className="birthdayImg" src="assets/gift.png" alt="" />
+          <span className="birthdayText">
+            <b>Pola Foster</b> and <b>3 other friends</b> have a birhday today.
+          </span>
+        </div>
+        <img className="rightbarAd" src="assets/ad.png" alt="" />
+        <h4 className="rightbarTitle">Online Friends</h4>
+        <ul className="rightbarFriendList">
+          {Users.map((u) => (
+            <Online key={u.id} user={u} />
+          ))}
+        </ul>
+      </>
+    );
+  };
+
+  const ProfileRightbar = () => {
+    return (
+      <>
         <h4 className="rightbarTitle">User information</h4>
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
@@ -73,7 +93,13 @@ export default function RightBar(){
           </div>
         </div>
       </>
-        </div>
+    );
+  };
+  return (
+    <div className="rightbar">
+      <div className="rightbarWrapper">
+        {profile ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
-      );
-    };
+    </div>
+  );
+}
