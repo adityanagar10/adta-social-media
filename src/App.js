@@ -1,4 +1,5 @@
-import Home from './components/home/home.component'
+import Home from './pages/home/home.component'
+import Profile from './pages/profile/profile.component'
 
 function App() {
   return (
