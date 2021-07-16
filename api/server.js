@@ -14,7 +14,9 @@ mongoose.connect(process.env.MONGO_URL,
     () => {console.log("Connected to Mongo");})
 
 
-
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 //middlewares
 
@@ -27,12 +29,5 @@ app.use(morgan('tiny'))
 
 app.use('/api/users' , userRoute)
 app.use('/api/auth' , authRoute)
-
-
-
-app.get('/users', (req,res)=> {
-    res.send("Welcome to homepage")
-})
-
 
 app.listen(8000, () => {console.log("~~~~ Server Started ~~~~");})
