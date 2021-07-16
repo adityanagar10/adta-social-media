@@ -6,6 +6,7 @@ const helmet = require("helmet")
 const app = express()
 const userRoute = require("./routes/users")
 const authRoute = require("./routes/auth")
+const pathRoute = require("./routes/posts")
 
 dotenv.config()
 
@@ -27,6 +28,7 @@ app.use(morgan('tiny'))
 
 //routes
 
+app.use('/api/posts', pathRoute)
 app.use('/api/users' , userRoute)
 app.use('/api/auth' , authRoute)
 
