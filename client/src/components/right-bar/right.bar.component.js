@@ -24,6 +24,7 @@ export default function Rightbar({ profile }) {
   };
 
   const ProfileRightbar = () => {
+    const pubfoler = process.env.REACT_APP_PUBLIC_FOLDER
     return (
       <>
         <h4 className="rightbarTitle">User information</h4>
@@ -45,7 +46,7 @@ export default function Rightbar({ profile }) {
         <div className="rightbarFollowings">
           <div className="rightbarFollowing">
             <img
-              src="/assests/person/1.jpeg"
+              src={pubfoler+"/person/1.jpeg"}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -53,7 +54,7 @@ export default function Rightbar({ profile }) {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assests/person/2.jpeg"
+              src={pubfoler+"/person/2.jpeg"}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -61,7 +62,7 @@ export default function Rightbar({ profile }) {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assests/person/3.jpeg"
+              src={pubfoler+"/person/3.jpeg"}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -69,7 +70,7 @@ export default function Rightbar({ profile }) {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assests/person/4.jpeg"
+              src={pubfoler+"/person/4.jpeg"}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -77,7 +78,7 @@ export default function Rightbar({ profile }) {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assests/person/5.jpeg"
+              src={pubfoler+"/person/5.jpeg"}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -85,7 +86,7 @@ export default function Rightbar({ profile }) {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assests/person/6.jpeg"
+              src={pubfoler+"/person/6.jpeg"}
               alt=""
               className="rightbarFollowingImg"
             />

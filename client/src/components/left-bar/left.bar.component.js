@@ -10,8 +10,8 @@ import {
     Event,
     School,
    } from "@material-ui/icons";
-//   import { Users } from "../../dummyData";
-//   import CloseFriend from "../closeFriend/CloseFriend";
+import { Users } from "../../dummyData";
+import CloseFriend from "../closeFriend/close.friend";
 import './left.bar.styles.css'
   
   export default function Sidebar() {
@@ -57,12 +57,12 @@ import './left.bar.styles.css'
             </li>
           </ul>
           <button className="sidebarButton">Show More</button>
-          {/* <hr className="sidebarHr" /> */}
-          {/* <ul className="sidebarFriendList">
+          {<hr className="sidebarHr" />}
+          <ul className="sidebarFriendList">
             {Users.map((u) => (
               <CloseFriend key={u.id} user={u} />
             ))}
-          </ul> */}
+          </ul>
         </div>
       </div>
     );
