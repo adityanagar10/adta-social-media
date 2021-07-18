@@ -3,6 +3,7 @@ const morgan = require("morgan")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 const helmet = require("helmet")
+const cors = require("cors")
 const app = express()
 const userRoute = require("./routes/users")
 const authRoute = require("./routes/auth")
@@ -23,6 +24,7 @@ mongoose.set('useCreateIndex', true);
 
 app.use(express.json());
 app.use(helmet())
+app.use(cors())
 app.use(morgan('tiny'))
 
 
