@@ -1,10 +1,11 @@
-import React from 'react';
+import {useContext} from 'react';
 import {Link} from "react-router-dom"
 import { Search, Person, Chat, Notifications } from '@material-ui/icons'
 import './top.bar.styles.css'
 
 
 export default function Topbar(){
+  const {user} = useContext(AuthContext)
     return (
         <div className="topbarContainer">
       <div className="topbarLeft">
