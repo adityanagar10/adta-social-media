@@ -24,7 +24,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 //middlewares
-app.use("/images", express.static(path.join(__dirname , "public/images")))
+app.use("/images", express.static(path.join(__dirname , "/public/images")))
 app.use(express.json());
 app.use(helmet())
 app.use(cors())
