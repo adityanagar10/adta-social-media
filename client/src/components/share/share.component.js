@@ -1,6 +1,6 @@
 import "./share.styles.css";
 import { Link } from "react-router-dom";
-import {PermMedia, Label,Room, EmojiEmotions} from "@material-ui/icons"
+import {PermMedia, Label,Room, EmojiEmotions, Cancel} from "@material-ui/icons"
 import {useRef , useState} from "react"
 import axios from "axios";
 
@@ -40,7 +40,6 @@ export default function Share({user}) {
         <Link to={`/profile/${user.username}`}>
         <img className="shareProfileImg" src={user.profilePiture ? PublicFolder + user.profilePiture : PublicFolder+"/person/noAvatar.png"} alt="" />
         </Link>
-         
           <input
             placeholder={"What's on your mind " + user.username + "?"}
             className="shareInput"
@@ -48,6 +47,12 @@ export default function Share({user}) {
           />
         </div>
         <hr className="shareHr"/>
+        {file && (
+          <div className="shareImgContainer">
+            <img className="shareImg" src={URL.createObjectURL(file)} alt="" />
+            <Cancel className="shareCancelImg" onClick={() => setFile(null)} />
+          </div>
+        )}
         <form className="shareBottom" onSubmit={submitHandler}>
             <div className="shareOptions">
                 <label htmlFor="file" className="shareOption">
