@@ -29,7 +29,7 @@ export default function Profile() {
             <div className="profileCover">
               <img
                 className="profileCoverImg"
-                src={user.coverPicture }
+                src={user.coverPicture || pubfol+"/post/noBanner.png" }
                 alt=""
               />
               <img
